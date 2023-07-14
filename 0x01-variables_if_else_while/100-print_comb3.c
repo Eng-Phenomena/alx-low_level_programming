@@ -2,14 +2,16 @@
 
 /**
  * main - prints all possible different combinations
+ *
  * Return: 0
  */
 int main(void)
 {
+	int n, m;
 
-	for (int n = 48; n <= 56; n++)
+	for (n = 48; n <= 56; n++)
 	{
-		for (int m = 49; m <= 57; m++)
+		for (m = 49; m <= 57; m++)
 		{
 			if (m > n)
 			{
