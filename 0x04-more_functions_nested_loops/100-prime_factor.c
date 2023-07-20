@@ -28,6 +28,6 @@ int main(void)
 	if (num > 2)
 		fact = num;
 
-	printf("%ld\n", max);
+	printf("%ld\n", fact);
 	return (0);
 }
