@@ -17,7 +17,7 @@ char *leet(char *c)
 		for (j = 0; j < 10; j++)
 		{
 			if (c[i] == letter[j])
-				n[i] = num[j];
+				c[i] = num[j];
 		}
 	}
 	return (n);
