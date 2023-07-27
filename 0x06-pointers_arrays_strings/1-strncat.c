@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - concantes 2 strings
+ * _strncat - concantes 2 strings
  * @dest: pointer char
  * @src: pointer char
  * @n: num
@@ -10,17 +10,17 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-        int i = 0, count = 0;
+	int i = 0, count = 0;
+	
+	while (dest[count] != '\0')
+		count++;
 
-        while (dest[count] != '\0')
-                count++;
-
-        for (i = 0; src[i] != '\0' && i < n; i++)
-        {
-                dest[count] = src[i];
-                count++;
-        }
-        dest[count] = '\0';
-
-        return (dest);
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[count] = src[i];
+		count++;
+	}
+	dest[count] = '\0';
+	
+	return (dest);
 }
