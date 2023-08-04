@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-int main(argc, *argv[])
+int main(argc, **argv)
 {
 	printf("%s\n", argv[0]);
 	return (0);
