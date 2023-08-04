@@ -2,45 +2,62 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+
 /**
- * main - entry point
- * @argc: counter
- * @argv: pointer to pointer
+ * check - checks
+ * @str: arr
  * Return: 0
  */
-
-int main(int argc, char **argv)
+int check(char *str)
 {
-	unsigned int count = 0, i = 0;
-	if (argc == 1)
+	unsigned int count;
+
+	count = 0;
+	while (count < strlen(str))
+
 	{
-		printf("%d\n",0);
-		return (0);
-	}
-	else{
-		for (i = 1; i < argc; i++)
-		{	
-			char str[] = argv[i];
-
-			while (count < strlen(str)) 
-			{
-				if (!isdigit(str[count])) 
-				{
-					printf("Error\n");
-					return (1);
-				}
-
-				count++;
-			}
+		if (!isdigit(str[count])) 
+		{
+			return (0);
 		}
+
+		count++;
 	}
+	return (1);
+}
 
-	int sum = 0;
+/**
+ * main - entry point
+ * @argc: Count 
+ * @argv: pointer arg
+ *
+ * Return: 0 
+ */
 
-	for (i = 1; i < argc; i++)
+int main(int argc, char *argv[])
+
+{
+	int count = 1, str_to_string, sum = 0;
+
+	while (count < argc) 
 	{
-		sum += atoi(argv[i]);
+		if (check(argv[count]))
+
+		{
+			str_to_int = atoi(argv[count]);
+			sum += str_to_int;
+		}
+
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		count++;
 	}
-	printf("%d\n", sum);
+
+	printf("%d\n", sum); 
+
 	return (0);
 }
