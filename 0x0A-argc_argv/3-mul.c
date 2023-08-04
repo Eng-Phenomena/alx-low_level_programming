@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -15,6 +16,6 @@ int main(int argc, char *argv[])
 		return (0);
 	}	
 
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	printf("%d\n", _atoi(argv[1]) * _atoi(argv[2]));
 	return (0);
 }
