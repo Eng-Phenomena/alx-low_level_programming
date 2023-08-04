@@ -37,7 +37,7 @@ int check(char *str)
 int main(int argc, char *argv[])
 
 {
-	int count = 1, str_to_string, sum = 0;
+	int count = 1, str_to_int, sum = 0;
 
 	while (count < argc) 
 	{
