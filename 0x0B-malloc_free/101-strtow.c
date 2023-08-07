@@ -20,11 +20,15 @@ char **strtow(char *str)
 	height = strcount(str);
 	words = (char **) malloc(sizeof(char *) * height);
 
+	if (word == NULL)
+		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
 		wordcounts = wordcount(str, i) + 1;
 		words[i] = (char *) malloc(sizeof(char) * wordcounts);
-
+		if (word[i] == NULL)
+			return (NULL);
 		for (j = 0; j < wordcounts || str[j] != '\0'; j++)
 		{
 			words[i][j] = str[tmp];
@@ -58,7 +62,7 @@ int strcount(char *str)
 /**
  * wordcount - counts word letterr
  * @str: string
- * @tmp: index of word
+ * @index: index of word
  * Return: num of letters
  */
 
