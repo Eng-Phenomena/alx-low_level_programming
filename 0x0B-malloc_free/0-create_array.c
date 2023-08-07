@@ -17,8 +17,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
+	int i = 0;
 
-	for (; size >= 0; size--)
+	for (i = 0; arr[i] != '\0'; i++)
 	{
 		arr[size - 1] = c;
 	}	
