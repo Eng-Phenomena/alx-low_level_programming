@@ -6,6 +6,8 @@
  * @str: string
  * Return: 2d pointer
  */
+int strcount(char *str);
+int wordcount(char *str, int index);
 
 char **strtow(char *str)
 {
@@ -13,7 +15,7 @@ char **strtow(char *str)
 	int i = 0, height = 0, j = 0;
 	int tmp = 0, wordcounts = 0;
 
-	if (str == NULL || *str == "")
+	if (str == NULL)
 		return (NULL);
 	height = strcount(*str);
 	words = (char **) malloc(sizeof(char *) * height);
@@ -23,12 +25,12 @@ char **strtow(char *str)
 		wordcounts = wordcount(str, i) + 1;
 		words[i] = (char *) malloc(sizeof(char) * wordcounts);
 
-		for (j = 0; str[j] != " " || str[j] != '\0'; j++)
+		for (j = 0; j < wordcounts || str[j] != '\0'; j++)
 		{
 			words[i][j] = str[tmp];
 			tmp++;
 		}
-		arr[i][tmp] = '\0';
+		words[i][tmp] = '\0';
 
 	}
 	return (words);
