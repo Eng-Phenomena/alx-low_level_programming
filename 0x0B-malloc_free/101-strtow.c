@@ -20,14 +20,14 @@ char **strtow(char *str)
 	height = strcount(str);
 	words = (char **) malloc(sizeof(char *) * height);
 
-	if (word == NULL)
+	if (words == NULL)
 		return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
 		wordcounts = wordcount(str, i) + 1;
 		words[i] = (char *) malloc(sizeof(char) * wordcounts);
-		if (word[i] == NULL)
+		if (words[i] == NULL)
 			return (NULL);
 		for (j = 0; j < wordcounts || str[j] != '\0'; j++)
 		{
