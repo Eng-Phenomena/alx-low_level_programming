@@ -17,7 +17,7 @@ char **strtow(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	height = strcount(*str);
+	height = strcount(str);
 	words = (char **) malloc(sizeof(char *) * height);
 
 	for (i = 0; i < height; i++)
@@ -48,7 +48,7 @@ int strcount(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == " ")
+		if (str[i] == ' ')
 			count++;
 	}
 	count++;
@@ -69,7 +69,7 @@ int wordcount(char *str, int index)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		tmp++;
-		if (str[i] == " ")
+		if (str[i] == ' ')
 			count++;
 		if (count == (index + 1))
 		{
