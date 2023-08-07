@@ -43,7 +43,7 @@ char **strtow(char *str)
 /**
  * strcount - coiunting words in a string
  * @str: string
- * @Return: int words
+ * Return: int words
  */
 
 int strcount(char *str)
@@ -55,7 +55,6 @@ int strcount(char *str)
 		if (str[i] == ' ')
 			count++;
 	}
-	count++;
 	return (count);
 }
 
