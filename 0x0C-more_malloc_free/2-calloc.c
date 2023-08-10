@@ -11,7 +11,7 @@ char *setzero(char *ptr, unsigned int size);
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr = malloc(size * nmemb);
+	char *ptr = malloc(size * nmemb);
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -33,6 +33,6 @@ char *setzero(char *ptr, unsigned int size)
 	int i = 0;
 
 	for (i = 0; i < size; i++)
-		ptr[i] = '0';
+		ptr[i] = 0;
 	return (ptr);
 }
