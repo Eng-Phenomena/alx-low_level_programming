@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 char *setzero(char *ptr, unsigned int size)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	for (i = 0; i < size; i++)
 		ptr[i] = 0;
