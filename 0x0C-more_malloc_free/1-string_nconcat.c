@@ -20,12 +20,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n > count2)
 	{
-		str = malloc(sizeof(char) * (count1 + count2));
+		str = malloc(sizeof(char) * (count1 + count2 + 1));
 		tmp = count1 + count2;
 	}
 	else
 	{
-		str = malloc(sizeof(char) * (count1 + n));
+		str = malloc(sizeof(char) * (count1 + n + 1));
 		tmp = count1 + n;
 	}
 	if (str == NULL)
@@ -43,6 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			j++;
 		}
 	}
+	str[i] = '\0';
 
 	return (str);
 }
