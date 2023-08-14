@@ -1,5 +1,5 @@
-#ifndef STRUCT_1
-#define STRUCT_1
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * dog - dogs info
