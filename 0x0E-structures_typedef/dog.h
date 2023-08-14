@@ -6,14 +6,17 @@
  * @name: string 
  * @age: float
  * @owner: string
+ *
  * Description: blah blah dogs info
  */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}dog_t;
+};
+
+typedef struct dog dog_st;
 
 #endif
