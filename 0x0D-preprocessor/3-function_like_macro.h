@@ -1,6 +1,6 @@
-#ifndef TASK_3
-#define TASK_3
+#ifndef ABBAS
+#define ABBAS
 
-#define ABS(x) ((x) > (0)? (x) : -(x))
+#define ABS(x) ((x) < (0)? -(x): (x))
 
 #endif
