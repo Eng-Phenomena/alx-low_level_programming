@@ -1,8 +1,8 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef STRUCT_1
+#define STRUCT_1
 
 /**
- * dog - dogs info
+ * struct dog - dogs info
  * @name: string 
  * @age: float
  * @owner: string
