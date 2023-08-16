@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
-
+#include "function_pointers.h"
 /**
  * main - Prints teh calculation used
  * @argc: The number of args
@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
-	char *op;
+	char *op = argv[2];
 
 	if (argc != 4)
 	{
@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	op = argv[2];
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
