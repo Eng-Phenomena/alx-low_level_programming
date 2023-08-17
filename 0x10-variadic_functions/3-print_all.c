@@ -24,14 +24,14 @@ void print_all(const char * const format, ...)
 	if (format == NULL)
 		return;
 
-	while (format[i] != NULL)
+	while (format[i])
 	{
 		types = format[i];
 
 		switch (types)
 		{
 			case 'c':
-				char_f = va_arg(args, char);
+				char_f = va_arg(args, int);
 				printf("%s%c", separator, char_f);
 				break;
 			case 'i':
@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 				printf("%s%d", separator, int_f);
 				break;
 			case 'f':
-				float_f = va_arg(args, float);
+				float_f = va_arg(args, double);
 				printf("%s%f", separator, float_f);
 				break;
 			case 's':
