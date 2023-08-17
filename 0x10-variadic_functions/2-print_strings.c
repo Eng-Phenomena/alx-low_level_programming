@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_strings - print nums followed by a new line
+ * print_strings - print names followed by a new line
  * @seperator: char seperator
  * @n: nums of nums in the parameters
  * @...: variable nums of numbers
