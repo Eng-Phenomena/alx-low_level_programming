@@ -1,3 +1,5 @@
+	global main
+	 extern printf
 .LC0:
         .string "Hello, Holberton"
         .text
