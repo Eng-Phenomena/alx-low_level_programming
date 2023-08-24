@@ -1,3 +1,4 @@
+	global main
 section .data
     format db "Hello, Holberton", 0   ; Format string for printf
 
