@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	while (n)
 	{
-		_putchar(n & 0x01);
+		_putchar((n & 0x01) + '0' );
 	       n >> 1;	
 	}
 }
