@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -17,6 +18,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	let = read(fd, buf, letters);
 	wri = write(STDOUT_FILENO, buf, let);
+
+	free(buf);
+	close(fd);
 
 	return (wri);
 }
