@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t let, wri;
 	char *buf = malloc(sizeof(char) * letters);
 
-	if (filename || fd == -1)
+	if (fd == -1)
 		return (0);
 	let = read(fd, buf, letters);
 	wri = write(STDOUT_FILENO, buf, let);
