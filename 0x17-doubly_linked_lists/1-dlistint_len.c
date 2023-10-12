@@ -2,7 +2,7 @@
 
 /**
  * dlistint_len - length of list
- * @h: header node 
+ * @h: header node
  * Return: number of nodes in list
  */
 size_t dlistint_len(const dlistint_t *h)
